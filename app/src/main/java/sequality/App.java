@@ -10,5 +10,32 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        int sum, x, y;
+        double ave;
+
+        x = 2;
+        y = 3;
+
+        Calculate cal = new Calculate();
+        sum = cal.sum(x,y);
+        ave = cal.ave(x,y);
+
+        System.out.println(
+          "Sum of "+x+" and "+y+" is "+sum+". Average is "+ave+".");
+
+        x = 1;
+        y = 10;
+        sum = cal.loop_sum(x,y);
+        ave = cal.loop_ave(x,y);
+
+        System.out.println(
+          "Sum of "+x+" to "+y+" is "+sum+". Average is "+ave+".");
+
+        System.out.println(
+          "Sum of odd of 1 to 10 is "+cal.odd_even(x,y,1)+". Sum of even is "+cal.odd_even(x,y,0)+".");
+
     }
+
+
 }
